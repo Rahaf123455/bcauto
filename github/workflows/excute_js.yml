@@ -15,7 +15,7 @@ jobs:
 
       - name: Download JavaScript file
         run: |
-          curl -O https://s243.panelboxmanager.com:2083/cpsess4968027862/frontend/jupiter/filemanager/showfile.html?file=formSubmition.js&fileop=&dir=%2Fhome%2Ffortvic%2Fbcauto%2Fbcautooffer.ca%2Fjs&dirop=&charset=&file_charset=_DETECT_&baseurl=&basedir=
+          curl -O https://bcautooffer.ca/js/formSubmition.js
           ls -al  # List files in the current directory for debugging
           cat formSubmition.js  # Print the contents of the downloaded file for debugging
 
