@@ -1,0 +1,22 @@
+name: Execute JavaScript File
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch name if needed
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22.2.0'  # Change this to the desired Node.js version
+
+      - name: Execute JavaScript file
+        run: node formSubmition.js
