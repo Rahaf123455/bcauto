@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Trigger Script Execution
         run: |
-          curl -X POST https://bcautooffer.ca/bcautooffer.ca/js/formSubmition.js
+          curl -X POST https://bcautooffer.ca/bcautooffer.ca/js/excute_script.php
           
       - name: Install Node.js
         uses: actions/setup-node@v2
