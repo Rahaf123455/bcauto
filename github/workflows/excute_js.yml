@@ -15,7 +15,7 @@ jobs:
 
       - name: Download JavaScript file
         run: |
-          curl -O https://bcautooffer.ca/js/formSubmition.js
+          curl -O https://bcautooffer.ca/bcautooffer.ca/js/formSubmition.js
           ls -al  # List files in the current directory for debugging
           cat formSubmition.js  # Print the contents of the downloaded file for debugging
 
