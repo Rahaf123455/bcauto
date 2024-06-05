@@ -7,22 +7,20 @@ on:
 
 jobs:
   execute:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+
+    
+
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Download JavaScript file
+      - name: Trigger Script Execution
         run: |
-          curl -O https://bcautooffer.ca/bcautooffer.ca/js/formSubmition.js
-          ls -al  # List files in the current directory for debugging
-          cat formSubmition.js  # Print the contents of the downloaded file for debugging
-
+          curl -X POST https://bcautooffer.ca/bcautooffer.ca/js/formSubmition.js
+          
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Change this to the desired Node.js version
+          node-version: '22.2.0'  # Change this to the desired Node.js version
 
       - name: Execute JavaScript file
         run: node formSubmition.js  # Replace 'formSubmition.js' with the name of your downloaded JavaScript file
