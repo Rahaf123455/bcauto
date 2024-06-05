@@ -13,10 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Download JavaScript file
+        run: |
+          curl -O https://bcautooffer.ca/bcautooffer.ca/js/formSubmition.js
+
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '22.2.0'  # Change this to the desired Node.js version
 
       - name: Execute JavaScript file
-        run: node formSubmition.js
+        run: node formSubmition.js  # Replace 'file.js' with the name of your downloaded JavaScript file
